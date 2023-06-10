@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingVC" customModule="NewsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="okayButton" destination="q94-Lf-D33" id="ZlJ-59-u8b"/>
+                <outlet property="tableView" destination="DDg-Ar-9db" id="qWs-kM-VaH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Bs-xh-XB3">
+                    <rect key="frame" x="20" y="80" width="353" height="718"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DDg-Ar-9db">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="658"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q94-Lf-D33">
+                            <rect key="frame" x="0.0" y="658" width="353" height="60"/>
+                            <color key="backgroundColor" red="0.38343405720000001" green="0.72649687529999996" blue="0.66274088620000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="soQ-MA-H4o"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Okay">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="okayButtonAction:" destination="-1" eventType="touchUpInside" id="DGG-cz-1AF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="q94-Lf-D33" firstAttribute="leading" secondItem="0Bs-xh-XB3" secondAttribute="leading" id="2Wk-Or-qip"/>
+                        <constraint firstAttribute="bottom" secondItem="q94-Lf-D33" secondAttribute="bottom" id="7qn-Bc-ONR"/>
+                        <constraint firstItem="DDg-Ar-9db" firstAttribute="leading" secondItem="0Bs-xh-XB3" secondAttribute="leading" id="CbZ-9x-w0y"/>
+                        <constraint firstAttribute="trailing" secondItem="DDg-Ar-9db" secondAttribute="trailing" id="HJ0-KL-Yry"/>
+                        <constraint firstItem="DDg-Ar-9db" firstAttribute="top" secondItem="0Bs-xh-XB3" secondAttribute="top" id="NQ7-gw-dxp"/>
+                        <constraint firstAttribute="trailing" secondItem="q94-Lf-D33" secondAttribute="trailing" id="dLt-0h-BfZ"/>
+                        <constraint firstItem="q94-Lf-D33" firstAttribute="top" secondItem="DDg-Ar-9db" secondAttribute="bottom" id="sog-r9-G7a"/>
+                        <constraint firstItem="q94-Lf-D33" firstAttribute="top" secondItem="DDg-Ar-9db" secondAttribute="bottom" id="tli-hE-4Wl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="0Bs-xh-XB3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="3xF-ja-pgS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0Bs-xh-XB3" secondAttribute="bottom" constant="20" id="A5r-Oa-MC9"/>
+                <constraint firstItem="0Bs-xh-XB3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="gRh-YA-eMX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Bs-xh-XB3" secondAttribute="trailing" constant="20" id="w02-yy-cdD"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
