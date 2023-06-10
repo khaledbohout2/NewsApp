@@ -6,9 +6,10 @@ The project is built using MVVM-C architecture where:
  - VM represents ViewModel to handle the flow and work with the different services,\
  - V represents View to hold the UI,\
  - C represents Coordinator to handle the navigation and passing data between different modules,\
- and it's built with using Clean Architecture to keep the SOLID principle applied and make the project scalable.\
+ and it's built using Clean Architecture to keep the SOLID principle applied and make the project scalable.\
  It's using combine framework to apply observer pattern.\
  It's built by applying clean architecture by using use cases, repositories to deal with the services.\
+ app UI design built using UIKit fully programmatically to make All UI and screen control in one place, and Code may be searched and reused, and benifit from Easy code refactoring for experienced developers since the developer is in control of the UI elements.\
 
 List of Modules\
 1	News List handling the process of fetching the news list and retrieve the news data from the APIs, displaying that list to UI.\
@@ -16,18 +17,18 @@ List of Modules\
 
 Technologies
 Project is created using:\
-	•	MVVM-C Architecture\
+    •	MVVM-C Architecture\
     •	Combine framework\
     •	Clean Architecture\
-    •	iOS SDK 14.0\
-    •	Swift version 5.0\
-    •	XCode version 13.2.1\
+    •	iOS SDK 16.0\
+    •	Swift version 5.8\
+    •	XCode version 15\
 
 Third-Party libraries\
 Kingfisher which is used for fetching and caching images with lazy loading.\
 
 Test Cases\
-•	Repository Test cases\
+• use cases Test cases\
 
 Environments:
 1. DEBUG (For Development and Pointing to Dev Server)\
@@ -44,7 +45,7 @@ used The best practice which is to use single target with multiple schemes and c
 What is next:\
 1- add to favourites:\
 create local data base using core data and add Entity to it save users favourites.\
-2- Bonus: Use single column for portrait mode. Supporting double columns in lanscape
+2- Use single column for portrait mode. Supporting double columns in lanscape
 mode:\
 using collectionview instead of tableview and using UICollectionViewDelegateFlowLayout method\
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:\ UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {\
@@ -52,7 +53,8 @@ using collectionview instead of tableview and using UICollectionViewDelegateFlow
         let width = collectionView.frame.width / noOfCellsPerRow\
         return CGSize(width: width, height: (width * 0.36))\
     }\
-3- offline first approach:
+5- integrate google crashlytics and google analitics.
+4- offline first approach:
 using repository pattern to have remote data source and local data source\
 local data source is core data \
 remote data source is network\
